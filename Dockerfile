@@ -9,7 +9,7 @@ ENV JIRA_INSTALL /opt/atlassian/jira
 ENV JIRA_VERSION 8.3.2
 
 
-COPY 	/opt/src/jdk1.${JAVA_MAJOR}.${JAVA_MINOR} /opt/jdk1.${JAVA_MAJOR}.${JAVA_MINOR}
+COPY 	jdk1.${JAVA_MAJOR}.${JAVA_MINOR} /opt/jdk1.${JAVA_MAJOR}.${JAVA_MINOR}
 RUN  	echo "export JAVA_HOME=/opt/java\n" >/etc/profile.d/java.sh 
 RUN	echo "export PATH=$PATH:${JAVA_HOME}/bin" >>/etc/profile.d/java.sh
 RUN	chmod a+rx /etc/profile.d/java.sh
