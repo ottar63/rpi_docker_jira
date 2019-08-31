@@ -4,7 +4,10 @@ node {
         checkout scm
     }
     stage('Build image') {
-	sh "cp -r /opt/src/jdk1.8.0_221 jdk1.8.0_221"
+	def jdk = new File("jdk1.8.0_221")
+	if (! jdk.exists(){
+		sh "cp -r /opt/src/jdk1.8.0_221 jdk1.8.0_221"
+	}
 	sh "ls -al"
 	sh "pwd"
 	sh "du"
