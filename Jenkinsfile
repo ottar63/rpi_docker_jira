@@ -5,6 +5,7 @@ node {
     }
     stage('Build image') {
 	sh "ln -s /opt/src/jdk1.8.0_221 jdk1.8.0_221"
+	sh "ls -al"
         app = docker.build("ottar63/rpi-mysql-jira")
     }
     stage('Push image') {
