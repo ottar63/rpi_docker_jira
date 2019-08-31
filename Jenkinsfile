@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-	sh "ln -sf /opt/src/jdk1.8.0_221 jdk1.8.0_221"
+	sh "cp -r /opt/src/jdk1.8.0_221 jdk1.8.0_221"
 	sh "ls -al"
 	sh "pwd"
 	sh "du"
