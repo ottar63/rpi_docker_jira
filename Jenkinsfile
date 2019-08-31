@@ -4,8 +4,8 @@ node {
         checkout scm
     }
     stage('Build image') {
-	def jdk = new File("jdk1.8.0_221")
-	if (! jdk.exists(){
+	if (! fileExists("jdk1.8.0_221")
+	{
 		sh "cp -r /opt/src/jdk1.8.0_221 jdk1.8.0_221"
 	}
         app = docker.build("ottar63/rpi-mysql-jira")
