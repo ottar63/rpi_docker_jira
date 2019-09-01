@@ -10,7 +10,7 @@ ENV JIRA_VERSION 8.3.2
 
 
 COPY 	jdk1.${JAVA_MAJOR}.${JAVA_MINOR} /opt/jdk1.${JAVA_MAJOR}.${JAVA_MINOR}
-RUN	rm /opt/java/src.zip
+RUN	rm /opt/jdk1.${JAVA_MAJOR}.${JAVA_MINOR}/src.zip
 
 
 RUN  ln -s /opt/jdk1.${JAVA_MAJOR}.${JAVA_MINOR} /opt/java
