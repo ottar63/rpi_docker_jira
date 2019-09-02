@@ -18,6 +18,7 @@ RUN  rm /opt/java/src.zip
 RUN 	apt update \
 	&& apt upgrade -y \
 	&& apt install curl -y \
+    && rm -rf /var/lib/apt/lists/*  \
 	&& mkdir -p ${JIRA_HOME} \
 	&& mkdir -p ${JIRA_INSTALL} \
 	&& curl -Ls "https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-${JIRA_VERSION}.tar.gz" | tar -xz --directory "${JIRA_INSTALL}" --strip-components=1 --no-same-owner \

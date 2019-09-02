@@ -8,6 +8,11 @@ node {
 	{
 		sh "cp -r /opt/src/jdk1.8.0_221 jdk1.8.0_221"
 	}
+    if ( fileExists("jdk1.8.0_221/src.zip"))
+    {
+        sh "rm jdk1.8.0_221/src.zip"
+    }
+
         app = docker.build("ottar63/rpi-mysql-jira")
     }
     stage('Push image') {
