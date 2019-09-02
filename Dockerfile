@@ -35,7 +35,7 @@ RUN sed --in-place  "s/JVM_SUPPORT_RECOMMENDED_ARGS=\"\"/JVM_SUPPORT_RECOMMENDED
 RUN echo "jira.index.batch.maxrambuffermb=256\njira.index.interactive.maxrambuffermb=256\n" >>${JIRA_INSTALL}/jira-config.properties
 
 # run as daemon user
-#USER daemon:daemon
+USER daemon:daemon
 
 EXPOSE 8080
 
