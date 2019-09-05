@@ -16,7 +16,7 @@ RUN  ln -s /opt/jdk1.${JAVA_MAJOR}.${JAVA_MINOR} /opt/java
 
 RUN 	apt update \
 	&& apt upgrade -y \
-	&& apt install curl -y \
+    && apt install curl  ca-certificates -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*  \
 	&& mkdir -p ${JIRA_HOME} \
 	&& mkdir -p ${JIRA_INSTALL} \
