@@ -6,7 +6,7 @@ ENV JAVA_HOME /opt/java
 
 ENV JIRA_HOME /var/atlassian/jira
 ENV JIRA_INSTALL /opt/atlassian/jira
-ENV JIRA_VERSION 8.3.2
+ENV JIRA_VERSION 8.3.4
 
 
 COPY 	jdk1.${JAVA_MAJOR}.${JAVA_MINOR} /opt/jdk1.${JAVA_MAJOR}.${JAVA_MINOR}
